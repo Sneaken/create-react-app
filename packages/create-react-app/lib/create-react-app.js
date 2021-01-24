@@ -1,7 +1,9 @@
-'use strict';
+"use strict";
 
-module.exports = createReactApp;
+module.exports = {
+  init
+};
 
-function createReactApp() {
-    // TODO
+function init() {
+  // TODO
 }

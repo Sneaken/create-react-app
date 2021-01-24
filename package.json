@@ -4,6 +4,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "create-react-app": "cd ./packages/create-react-app && node index.js test"
+  },
   "devDependencies": {
     "fs-extra": "^9.1.0",
     "lerna": "^3.22.1"
