@@ -22,5 +22,8 @@
   },
   "bugs": {
     "url": "https://github.com/Sneaken/create-react-app/issues"
+  },
+  "dependencies": {
+    "commander": "^7.0.0"
   }
 }

@@ -10,7 +10,7 @@
 
 1. yarn
    重点在于包管理，处理依赖，处理软链
-   yarn install = learn bootstrap
+   yarn install = lerna bootstrap
 
    给子项目添加依赖包
    yarn workspace [子项目] add [包]

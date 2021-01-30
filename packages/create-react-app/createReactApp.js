@@ -111,7 +111,9 @@ function init() {
     })
     .parse(process.argv);
 
-  if (program.info) {
+  const options = program.opts()
+
+  if (options.info) {
     console.log(chalk.bold("\nEnvironment Info:"));
     console.log(
       `\n  current version of ${packageJson.name}: ${packageJson.version}`
@@ -194,13 +196,15 @@ function init() {
         console.log();
         process.exit(1);
       } else {
+        // 在 Commander 7 以前，选项的值是作为属性存储在command对象上的。 这种处理方式便于实现，但缺点在于，选项可能会与Command的已有属性相冲突。
+        // 从 Commander 7 开始，选项可以通过在Command对象上调用.opts()方法来获取。对于多个单词的长选项，使用驼峰法获取，例如--template-engine选项通过program.opts().templateEngine获取。
         createApp(
           projectName,
-          program.verbose,
-          program.scriptsVersion,
-          program.template,
-          program.useNpm,
-          program.usePnp
+          options.verbose,
+          options.scriptsVersion,
+          options.template,
+          options.useNpm,
+          options.usePnp
         );
       }
     });

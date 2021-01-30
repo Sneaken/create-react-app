@@ -6,7 +6,6 @@
   "useWorkspaces": true,
   "command": {
     "bootstrap": {
-      "hoist": true
     }
   },
   "version": "0.0.0"
